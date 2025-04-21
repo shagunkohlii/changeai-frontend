@@ -1,0 +1,58 @@
+/* Home.css */
+.home-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fdecec;
+    padding: 4rem;
+    height: 100vh;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+  
+  .home-left {
+    flex: 1;
+    padding-right: 2rem;
+  }
+  
+  .home-left h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    color: #111;
+  }
+  
+  .home-left p {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    color: #444;
+    max-width: 400px;
+  }
+  
+  .home-left button {
+    margin-top: 2rem;
+    padding: 0.8rem 2rem;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .home-left button:hover {
+    background-color: #333;
+  }
+  
+  .home-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .home-right img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+  }
+  
