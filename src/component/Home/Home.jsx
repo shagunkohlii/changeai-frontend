@@ -1,27 +1,23 @@
 import React from "react";
-import "./Home.css"; // External CSS file for styling
-import myImage from "../../assets/homeimage.jpg";
-
+import "./Home.css";
+import homeImage from "../../assets/homeimage.jpg";
 
 const Home = () => {
   return (
-    <div className="home-container">
-      <div className="home-left">
+    <section className="home">
+      <div className="home-content">
         <h1>
-          Revolutionize You…
+          Revolutionize You<span className="dots">...</span>
         </h1>
         <p>
-          Unlock the Power of Artificial Intelligence: Discover how ChangeAI can
-          transform your organization and daily operations.
+          Unlock the Power of Artificial Intelligence: Discover How ChangeAI Can Transform Your Organization and Drive Innovation.
         </p>
-        <button>Explore Solutions</button>
+        <button className="home-btn">Explore Solutions</button>
       </div>
-
-      <div className="home-right">
-        {/* <img src="changeai-frontend\src\assets\homeimage.jpg" alt="Futuristic Device" /> */}
-        <img src={myImage} alt="Futuristic" />
+      <div className="home-image">
+        <img src={homeImage} alt="AI Device" />
       </div>
-    </div>
+    </section>
   );
 };
 

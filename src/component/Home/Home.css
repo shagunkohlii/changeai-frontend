@@ -1,58 +1,115 @@
-/* Home.css */
-.home-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fdecec;
-    padding: 4rem;
-    height: 100vh;
-    box-sizing: border-box;
-    font-family: 'Helvetica Neue', sans-serif;
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 5%;
+  background-color: #fceced;
+  flex-wrap: wrap;
+  min-height: 80vh;
+}
+
+.home-content {
+  flex: 1;
+  min-width: 300px;
+  padding-right: 2rem;
+}
+
+.home-content h1 {
+  font-size: 3.5vw;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.home-content .dots {
+  font-size: 2vw;
+  color: #333;
+}
+
+.home-content p {
+  font-size: 1.1vw;
+  margin-bottom: 1.5rem;
+  color: #555;
+  max-width: 500px;
+}
+
+.home-btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1vw;
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.home-image {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-image img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 20px;
+}
+
+/* Tablet and small laptops */
+@media (max-width: 1024px) {
+  .home {
+    flex-direction: column-reverse;
+    padding: 3rem 4%;
+    text-align: center;
   }
-  
-  .home-left {
-    flex: 1;
-    padding-right: 2rem;
+
+  .home-content {
+    padding: 0;
   }
-  
-  .home-left h1 {
-    font-size: 3.5rem;
-    line-height: 1.2;
-    color: #111;
+
+  .home-content h1 {
+    font-size: 6vw;
   }
-  
-  .home-left p {
-    margin-top: 1rem;
-    font-size: 1.1rem;
-    color: #444;
-    max-width: 400px;
+
+  .home-content .dots {
+    font-size: 4vw;
   }
-  
-  .home-left button {
-    margin-top: 2rem;
-    padding: 0.8rem 2rem;
-    background-color: black;
-    color: white;
-    border: none;
-    border-radius: 50px;
+
+  .home-content p {
+    font-size: 1.3rem;
+  }
+
+  .home-btn {
     font-size: 1rem;
-    cursor: pointer;
-    transition: 0.3s ease;
+    padding: 0.7rem 1.4rem;
   }
-  
-  .home-left button:hover {
-    background-color: #333;
+
+  .home-image img {
+    max-width: 350px;
   }
-  
-  .home-right {
-    flex: 1;
-    display: flex;
-    justify-content: center;
+}
+
+/* Mobile phones */
+@media (max-width: 600px) {
+  .home-content h1 {
+    font-size: 8vw;
   }
-  
-  .home-right img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 16px;
+
+  .home-content p {
+    font-size: 1rem;
   }
-  
+
+  .home-btn {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .home-image img {
+    max-width: 280px;
+  }
+}
