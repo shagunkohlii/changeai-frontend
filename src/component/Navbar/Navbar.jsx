@@ -1,11 +1,21 @@
 import React, { useState } from 'react';
-import './Navbar.css'; // We'll create this file for the styles
+// import { Link } from "react-router-dom";
+import './Navbar.css';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+
+  const handleScroll = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+      setIsOpen(false); // close mobile menu after click
+    }
   };
 
   return (
@@ -30,19 +40,19 @@ const Navbar = () => {
         {/* Navigation links */}
         <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>
           <li className="nav-item">
-            <a href="home" className="nav-link">Home</a>
+            <a href='#home' className="nav-link" onClick={() => handleScroll("home")}>Home</a>
           </li>
           <li className="nav-item">
-            <a href="#projects" className="nav-link">Projects</a>
+            <a href="#About" className="nav-link" onClick={() => handleScroll("about")}>About</a>
           </li>
+          {/* <li className="nav-item">
+            <a href="#services" className="nav-link">Projects</a>
+          </li> */}
           <li className="nav-item">
-            <a href="#services" className="nav-link">Services</a>
-          </li>
-          <li className="nav-item">
-            <a href="#faq" className="nav-link">FAQ</a>
+            <a href="#team" className="nav-link" onClick={() => handleScroll("team")}>Team</a>
           </li>
           <li className="nav-item contact-button">
-            <a href="#contact" className="nav-link contact">Contact</a>
+            <a href="#contact" className="nav-link" onClick={() => handleScroll("contact")}>Contact</a>
           </li>
         </ul>
       </div>
